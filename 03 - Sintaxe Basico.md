@@ -372,3 +372,273 @@ A saída será algo parecido com:
    - Indented item
    - Indented item
 4. Fourth item
+
+## Código-fonte
+
+Para denotar uma palavra ou frase como código, coloque-a entre acentos graves (`).
+
+| Markdown                              | HTML                                               | Saída                                          |
+| ------------------------------------- | -------------------------------------------------- | ---------------------------------------------- |
+| At the command prompt, type \`nano\`. | At the command prompt, type `<code>`nano`</code>`. | At the command prompt, type <code>nano</code>. |
+
+### Escapando os acentos graves
+
+Se a palavra ou frase que deseja denotar como código incluir um ou mais acentos graves, você pode escapá-la colocando a palavra ou frase entre acentos graves duplos (``).
+
+| Markdown                                | HTML                                                 | Saída                                            |
+| --------------------------------------- | ---------------------------------------------------- | ------------------------------------------------ |
+| `` Use `code` in your Markdown file. `` | `<code>`Use \`code\` in your Markdown file.`</code>` | <code>Use \`code\` in your Markdown file.</code> |
+
+## Blocos de código-fonte
+
+Para criar blocos de código, recue cada linha do bloco em pelo menos quatro espaços ou uma tabulação.
+
+```
+    <html>
+      <head>
+      </head>
+    </html>
+```
+
+A saída será algo tipo:
+
+```
+<html>
+    <head>
+    </head>
+</html>
+```
+
+## Linhas horizontais
+
+Para criar uma régua horizontal, use três ou mais asteriscos (\*\*\*), hífens (---) ou sublinhados (\_\_\_) sozinhos em uma linha.
+
+```
+***
+
+---
+
+_________________
+```
+
+A saída será algo tipo:
+
+---
+
+### Melhores práticas
+
+Para compatibilidade, coloque linhas em branco antes e depois das réguas horizontais.
+
+| ✅ Faça assim                                                                       | ❌Não faça assim                                                       |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Try to put a blank line before...<br><br>---<br><br>...and after a horizontal rule. | Without blank lines, this would be a heading.<br>---<br>Don't do this! |
+
+## Links
+
+Para criar um link, coloque o texto do link entre colchetes (por exemplo, [Duck Duck Go]) e siga-o imediatamente com o URL entre parênteses (por exemplo, (https://duckduckgo.com)).
+
+```
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+```
+
+A saída será algo parecido com:
+
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+
+### Adicionando títulos
+
+Opcionalmente, você pode adicionar um título para um link. Isso aparecerá como uma dica de ferramenta quando o usuário passar o mouse sobre o link. Para adicionar um título, coloque-o entre aspas após o URL.
+
+```
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy").
+```
+
+A sapida será algo parecido com:
+
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy").
+
+### URLs e e-mails
+
+Para transformar rapidamente um URL ou endereço de e-mail em um link, coloque-o entre colchetes angulares.
+
+```
+<https://www.markdownguide.org>
+<fake@example.com>
+```
+
+A saída será algo parecido com:
+
+<https://www.markdownguide.org>  
+<fake@example.com>
+
+### Formatando links
+
+Para enfatizar os links, adicione asteriscos antes e depois dos colchetes e parênteses. Para denotar links como código, adicione acentos graves entre colchetes.
+
+```
+I love supporting the **[EFF](https://eff.org)**.
+This is the *[Markdown Guide](https://www.markdownguide.org)*.
+See the section on [`code`](#code).
+```
+
+A saída será algo parecido com:
+
+I love supporting the **[EFF](https://eff.org)**.  
+This is the _[Markdown Guide](https://www.markdownguide.org)_.  
+See the section on [`code`](#code).
+
+### Links de referência
+
+Os links de estilo de referência são um tipo especial de link que torna os URLs mais fáceis de exibir e ler no Markdown. Os links de estilo de referência são construídos em duas partes: a parte que você mantém alinhada com o seu texto e a parte que você armazena em outro lugar no arquivo para manter o texto fácil de ler.
+
+#### Formatando a primeira parte do link
+
+A primeira parte de um link de estilo de referência é formatada com dois conjuntos de colchetes. O primeiro conjunto de colchetes envolve o texto que deve aparecer vinculado. O segundo conjunto de colchetes exibe um rótulo usado para apontar para o link que você está armazenando em outro lugar do documento.
+
+Embora não seja obrigatório, você pode incluir um espaço entre o primeiro e o segundo conjunto de colchetes. O rótulo no segundo conjunto de colchetes não diferencia maiúsculas de minúsculas e pode incluir letras, números, espaços ou pontuação.
+
+Isso significa que os seguintes formatos de exemplo são aproximadamente equivalentes para a primeira parte do link:
+
+- [hobbit-hole][1]
+- [hobbit-hole] [1]
+
+#### Formatando a segunda parte do link
+
+A segunda parte de um link de estilo de referência é formatada com os seguintes atributos:
+
+1. O rótulo, etre colchetes, seguido imediatamente por dois pontos e pelo menos um espaço (por exemplo, [rótulo]: ).
+2. A URL do link, que você pode opcionalmente colocar entre colchetes angulares.
+3. O título opcional do link, que pode ser colocado entre aspas duplas, aspas simples ou parênteses.
+
+Isso significa que os seguintes formatos de exemplo são aproximadamente equivalentes para a segunda parte do link:
+
+```
+- [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle
+- [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
+- [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
+- [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
+- [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
+- [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
+- [1]: https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"
+```
+
+Você pode colocar esta segunda parte do link em qualquer lugar do documento Markdown. Algumas pessoas os colocam imediatamente após o parágrafo em que aparecem, enquanto outras pessoas os colocam no final do documento (como notas de fim ou notas de rodapé).
+
+#### Exemplo juntando as duas partes
+
+Digamos que você adicione um URL como um link de URL padrão a um parágrafo e fique assim no Markdown:
+
+```
+In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+eat: it was a [hobbit-hole](https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"), and that means comfort.
+```
+
+Embora possa apontar para informações adicionais interessantes, o URL exibido realmente não acrescenta muito ao texto bruto existente, além de torná-lo mais difícil de ler. Para corrigir isso, você pode formatar o URL assim:
+
+```
+In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+eat: it was a [hobbit-hole][1], and that means comfort.
+
+[1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
+```
+
+Em ambas as instâncias acima, a saída renderizada seria idêntica:
+
+> In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+> of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+> eat: it was a [hobbit-hole](https://en.wikipedia.org/wiki/Hobbit#Lifestyle "Hobbit lifestyles"), and that means comfort.
+
+e a saída HTML seria:
+
+```
+<a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="Hobbit lifestyles">hobbit-hole</a>
+```
+
+#### Melhores práticas
+
+Os aplicativos Markdown não concordam sobre como lidar com espaços no meio de uma URL. Para compatibilidade, tente codificar o URL de todos os espaços com %20. Como alternativa, se seu aplicativo Markdown oferecer suporte a HTML, você poderá usar a tag HTML.
+
+| ✅ Faça assim                                                                                                         | ❌Não faça assim                                |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `[link](https://www.example.com/my%20great%20page)`<br><br>`<a href="https://www.example.com/my great page">link</a>` | `[link](https://www.example.com/my great page)` |
+
+## Imagens
+
+Para adicionar uma imagem, adicione um ponto de exclamação (!), seguido de um texto alternativo entre colchetes e o caminho ou URL para o recurso de imagem entre parênteses. Opcionalmente, você pode adicionar um título entre aspas após o caminho ou URL.
+
+```
+![The San Juan Mountains are beautiful!](/assets/images/san-juan-mountains.jpg "San Juan Mountains")
+```
+
+A saída será:
+
+![The San Juan Mountains are beautiful!](./images/san-juan-mountains.jpg "San Juan Mountains")
+
+### Links para imagens
+
+Para adicionar um link a uma imagem, coloque o Markdown da imagem entre colchetes e adicione o link entre parênteses.
+
+```
+[![An old rock in the desert](/assets/images/shiprock.jpg "Shiprock, New Mexico by Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)
+```
+
+A saída será:
+
+[![An old rock in the desert](images/shiprock.jpg "Shiprock, New Mexico by Beau Rogers")](https://www.flickr.com/photos/beaurogers/31833779864/in/photolist-Qv3rFw-34mt9F-a9Cmfy-5Ha3Zi-9msKdv-o3hgjr-hWpUte-4WMsJ1-KUQ8N-deshUb-vssBD-6CQci6-8AFCiD-zsJWT-nNfsgB-dPDwZJ-bn9JGn-5HtSXY-6CUhAL-a4UTXB-ugPum-KUPSo-fBLNm-6CUmpy-4WMsc9-8a7D3T-83KJev-6CQ2bK-nNusHJ-a78rQH-nw3NvT-7aq2qf-8wwBso-3nNceh-ugSKP-4mh4kh-bbeeqH-a7biME-q3PtTf-brFpgb-cg38zw-bXMZc-nJPELD-f58Lmo-bXMYG-bz8AAi-bxNtNT-bXMYi-bXMY6-bXMYv)
+
+## Caracteres de escape
+
+Para exibir um caractere literal que seria usado para formatar texto em um documento Markdown, adicione uma barra invertida (\\) na frente do caractere.
+
+```
+\* Without the backslash, this would be a bullet in an unordered list.
+```
+
+A saída será:
+
+- Without the backslash, this would be a bullet in an unordered list.
+
+### Caracteres que podem ser escapados
+
+Você pode usar uma barra invertida para escapar dos seguintes caracteres.
+
+| Character | Name                                           |
+| --------- | ---------------------------------------------- |
+| \         | backslash                                      |
+| `         | backtick (see also escaping backticks in code) |
+| \*        | asterisk                                       |
+| \_        | underscore                                     |
+| { }       | curly braces                                   |
+| [ ]       | brackets                                       |
+| < >       | angle brackets                                 |
+| ( )       | parentheses                                    |
+| #         | pound sign                                     |
+| +         | plus sign                                      |
+| -         | minus sign (hyphen)                            |
+| .         | dot                                            |
+| !         | exclamation mark                               |
+| \|        | pipe (see also escaping pipe in tables)        |
+
+## HTML
+
+Muitos aplicativos Markdown permitem que você use tags HTML em texto formatado em Markdown. Isso é útil se você preferir determinadas tags HTML à sintaxe Markdown. Por exemplo, algumas pessoas acham mais fácil usar tags HTML para imagens. Usar HTML também é útil quando você precisa alterar os atributos de um elemento, como especificar a cor do texto ou alterar a largura de uma imagem.
+
+Para usar HTML, coloque as tags no texto do seu arquivo formatado em Markdown.
+
+```
+This **word** is bold. This <em>word</em> is italic.
+```
+
+A saída será:
+
+This **word** is bold. This <em>word</em> is italic.
+
+### Melhores práticas
+
+Por motivos de segurança, nem todos os aplicativos Markdown oferecem suporte a HTML em documentos Markdown. Em caso de dúvida, verifique a documentação do seu aplicativo Markdown. Alguns aplicativos suportam apenas um subconjunto de tags HTML.
+
+Use linhas em branco para separar os elementos HTML em nível de bloco como `<div>`, `<table>`, `<pre>` e `<p>` do conteúdo ao redor. Tente não indentar as tags com tabulações ou espaços - isso pode interferir na formatação.
+
+Você não pode usar a sintaxe Markdown dentro de tags HTML em nível de bloco. Por exemplo, `<p>itálico e **negrito**</p>` não funcionarão.
