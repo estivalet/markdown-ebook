@@ -9,11 +9,11 @@ Para criar um título, adicione um _hashtag_ (#) na frente de uma palavra ou fra
 | Markdown               | HTML                       | Saída                    |
 | ---------------------- | -------------------------- | ------------------------ |
 | # Heading level 1      | `<h1>Heading level 1</h1>` | <h1>Heading level 1</h1> |
-| ## Heading level 2     | `<h2>Heading level 2</h2>` | <h2>Heading level 1</h2> |
-| ### Heading level 3    | `<h3>Heading level 3</h3>` | <h3>Heading level 1</h3> |
-| #### Heading level 4   | `<h4>Heading level 4</h4>` | <h4>Heading level 1</h4> |
-| ##### Heading level 5  | `<h5>Heading level 5</h5>` | <h5>Heading level 1</h5> |
-| ###### Heading level 6 | `<h6>Heading level 6</h6>` | <h6>Heading level 1</h6> |
+| ## Heading level 2     | `<h2>Heading level 2</h2>` | <h2>Heading level 2</h2> |
+| ### Heading level 3    | `<h3>Heading level 3</h3>` | <h3>Heading level 3</h3> |
+| #### Heading level 4   | `<h4>Heading level 4</h4>` | <h4>Heading level 4</h4> |
+| ##### Heading level 5  | `<h5>Heading level 5</h5>` | <h5>Heading level 5</h5> |
+| ###### Heading level 6 | `<h6>Heading level 6</h6>` | <h6>Heading level 6</h6> |
 
 ### Sintaxe alternativo
 
@@ -427,7 +427,7 @@ A saída será algo tipo:
 
 ### Melhores práticas
 
-Para compatibilidade, coloque linhas em branco antes e depois das réguas horizontais.
+Para compatibilidade, coloque linhas em branco antes e depois das linhas horizontais.
 
 | ✅ Faça assim                                                                       | ❌Não faça assim                                                       |
 | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -598,28 +598,28 @@ Para exibir um caractere literal que seria usado para formatar texto em um docum
 
 A saída será:
 
-- Without the backslash, this would be a bullet in an unordered list.
+\* Without the backslash, this would be a bullet in an unordered list.
 
 ### Caracteres que podem ser escapados
 
 Você pode usar uma barra invertida para escapar dos seguintes caracteres.
 
-| Character | Name                                           |
-| --------- | ---------------------------------------------- |
-| \         | backslash                                      |
-| `         | backtick (see also escaping backticks in code) |
-| \*        | asterisk                                       |
-| \_        | underscore                                     |
-| { }       | curly braces                                   |
-| [ ]       | brackets                                       |
-| < >       | angle brackets                                 |
-| ( )       | parentheses                                    |
-| #         | pound sign                                     |
-| +         | plus sign                                      |
-| -         | minus sign (hyphen)                            |
-| .         | dot                                            |
-| !         | exclamation mark                               |
-| \|        | pipe (see also escaping pipe in tables)        |
+| Caracter | Nome                   |
+| -------- | ---------------------- |
+| \        | contra-barra           |
+| `        | agudo                  |
+| \*       | asterisco              |
+| \_       | sublinhado             |
+| { }      | chaves                 |
+| [ ]      | colchetes              |
+| < >      | sinal maior menor      |
+| ( )      | parênteses             |
+| #        | hashtag                |
+| +        | sinal de mais          |
+| -        | sinal de menos (hífen) |
+| .        | ponto                  |
+| !        | exclamação             |
+| \|       | barra vertical         |
 
 ## HTML
 
